@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "./styles.css";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination, Navigation,Lazy } from "swiper";
 import {data} from './mocData'
 
 export default function App() {
@@ -25,7 +25,7 @@ export default function App() {
           disableOnInteraction: false,
          
         }}
-       
+        
         pagination={{
           clickable: true,
         }}
@@ -44,7 +44,7 @@ export default function App() {
             spaceBetween: 50,
           },
         }}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation,Lazy]}
         className="mySwiper"
       >
         {data.map((item,index)=> {
@@ -54,14 +54,6 @@ export default function App() {
             </SwiperSlide>
           )
         })}
-        {/* <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide> */}
       </Swiper>
     </div>
   );
